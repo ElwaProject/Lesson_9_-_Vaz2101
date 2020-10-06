@@ -1,0 +1,628 @@
+@import "reset.css";
+/* VAZ2101 */
+
+.vaz2101 {
+	width: 1215px;
+	height: 420px;
+	/* border: 1px solid gray; */
+	position: absolute;
+	bottom: 100px;
+	left: 500px;
+	z-index: 10;
+	/* background-color: gray; */
+}
+
+.top {
+	position: absolute;
+	width: 750px;
+	left: 290px;
+	height: 0px;
+	top: -10px;
+	border-bottom: 160px solid orangered;
+	border-left: 150px solid transparent;
+	border-right: 130px solid transparent;
+	border-radius: 40% 40% 0 0;
+}
+.wind-screen {
+	position: absolute;
+	left: -88px;
+	top: 30px;
+	background-color: #78c8ff;
+	width: 40px;
+	height: 120px;
+	border-radius: 8px 5px 10px 10px;
+	border-right: 8px solid #c0c0c0;
+	transform: skew(-43deg);
+	border-left: 4px solid white;
+}
+.window {
+	position: absolute;
+	width: 510px;
+	left: -50px;
+	height: 0px;
+	top: 30px;
+	border-bottom: 125px solid#74CAFF;
+	border-left: 80px solid transparent;
+	border-right: 70px solid transparent;
+	border-radius: 30% 40% 20px 20px;
+}
+.window::after {
+	content: "";
+	position: absolute;
+	top: 4px;
+	left: 0;
+	height: 116px;
+	width: 8px;
+	border-left: 2px solid #c0c0c0;
+	border-right: 2px solid #c0c0c0;
+	background-color: orangered;
+}
+.window::before {
+	content: "";
+	position: absolute;
+	top: 9px;
+	right: 10px;
+	height: 114px;
+	width: 8px;
+	border-left: 2px solid #c0c0c0;
+	border-right: 2px solid #c0c0c0;
+	background-color: orangered;
+}
+.window-border {
+	position: relative;
+	top: 0px;
+	left: 180px;
+	height: 150px;
+	width: 30px;
+	border-left: 5px solid transparent;
+	border-right: 2px solid transparent;
+	border-bottom: 120px solid orangered;
+	box-shadow: black;
+}
+.rear-window {
+	position: absolute;
+	right: -75px;
+	top: 30px;
+	background-color: #62d3ff;
+	width: 50px;
+	height: 120px;
+	border-right: 4px solid white;
+	border-radius: 60px 0 10px 20px;
+	border-left: 8px solid #c0c0c0;
+	transform: skew(40deg);
+}
+.bottom {
+	width: 1220px;
+	height: 0px;
+	position: absolute;
+	bottom: 70px;
+	left: 20px;
+	border-top: 210px solid orangered;
+	border-left: 60px solid transparent;
+	border-right: 65px solid transparent;
+	border-radius: 22% 22% 0 0;
+	z-index: 2;
+}
+.headlamp {
+	width: 15px;
+	height: 40px;
+	background-color: #c0c0c0;
+	border-left: 2px solid #3b3b3b;
+	border-right: 3px solid white;
+	position: absolute;
+	top: 25px;
+	right: -40px;
+	border-radius: 2px 10px 10px 2px;
+}
+.headlamp:hover {
+	box-shadow: 0 0 30px 10px red;
+}
+.headlamp:before {
+	content: "";
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 10px;
+	height: 30px;
+	background-color: red;
+	border-radius: 2px 10px 10px 2px;
+	border-left: 4px solid #ff7d00;
+}
+.bottom::after {
+	content: "";
+	position: absolute;
+	width: 490px;
+	height: 10px;
+	top: -22px;
+	left: 245px;
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
+	opacity: 0.3;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+.bottom-shadow {
+	width: 200px;
+	height: 100px;
+	background: black;
+	border-radius: 100px / 60px;
+	bottom: 55px;
+	left: 45%;
+	position: absolute;
+	opacity: 0.85;
+	z-index: 1;
+}
+.bottom-shadow::before {
+	content: "";
+	width: 200px;
+	height: 100px;
+	background: black;
+	border-radius: 50px / 50px;
+	bottom: 10px;
+	left: -150px;
+	position: absolute;
+}
+/* КАПОТ */
+.bonnet {
+	position: absolute;
+	min-height: 100px;
+	width: 200px;
+	/* overflow: hidden; */
+}
+/* ПЕРЕДНИЙ БАМПЕР */
+.front-bumper {
+	width: 35px;
+	height: 70px;
+	background: linear-gradient(159deg, rgba(255, 255, 255, 1) 0%, rgba(250, 249, 207, 1) 100%);
+	position: absolute;
+	top: -88px;
+	left: -68px;
+	border-radius: 20px 20px 14px 100%;
+	border: 2px solid #3b3b3b;
+}
+.front-bumper:before {
+	content: "";
+	width: 60px;
+	height: 27px;
+	background: linear-gradient(159deg, rgba(255, 255, 255, 1) 0%, rgba(250, 249, 207, 1) 100%);
+	position: absolute;
+	border-radius: 70% 70% 14px 14px;
+	border: 2px solid #3b3b3b;
+	top: 15px;
+	left: 12px;
+}
+.front-bumper::after {
+	content: "";
+	position: absolute;
+	width: 40px;
+	height: 3px;
+	background-color: #3b3b3b;
+	opacity: 0.2;
+	top: 30px;
+	left: 22px;
+}
+/* ПЕРЕДНЯЯ ФАРА */
+.headlight {
+	position: absolute;
+	z-index: 0;
+	width: 30px;
+	height: 50px;
+	border-left: 7px solid #ffdd00;
+	border-radius: 10px 100% 100% 10px;
+	box-shadow: inset -1px 0 1px 1px rgba(0, 0, 0, 0.5), inset 1px 0 1px 1px rgba(0, 0, 0, 0.1),
+		-1px 0 0 1px rgba(0, 0, 0, 0.3), -3px 0 10px 5px #dcdcdc, inset 5px 0 5px 0 #ffdd00,
+		-5px 0 20px 0 rgba(255, 133, 0, 0.5), -10px 0 5px 0 #ffdd00;
+	top: -170px;
+	left: -48px;
+	background-color: white;
+}
+.headlight:hover {
+	box-shadow: 0 0 30px 10px yellow;
+}
+/* поворотник */
+.headlight::before {
+	content: "";
+	position: absolute;
+	width: 6px;
+	height: 6px;
+	background-color: #ff4d09;
+	border-radius: 50%;
+	box-shadow: 0 0 0 6px #ff7d00, 0 0 0 7px red, 0 0 30px 9px #ffdd00;
+	top: 8px;
+	right: -15px;
+}
+.front-door {
+	width: 280px;
+	height: 189px;
+	position: absolute;
+	bottom: 20px;
+	left: 280px;
+	border-radius: 20px 10px 10px 30px;
+	/* background-color: blue; */
+	border-left: 5px solid rgba(0, 0, 0, 0.5);
+	border-right: 5px solid rgba(0, 0, 0, 0.5);
+	border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+	border-top: 2px solid rgba(0, 0, 0, 0.2);
+}
+/* ручка двери */
+.front-door .handle,
+.back-door .handle {
+	width: 50px;
+	height: 20px;
+	position: relative;
+	top: 25px;
+	right: -210px;
+	background-color: #3b3b3b;
+	box-shadow: inset 0 5px 0 4px #c0c0c0;
+	border-radius: 5px 5px 15px 15px;
+	border: 2px solid rgba(0, 0, 0, 0.2);
+	z-index: 2;
+}
+
+.handle::after {
+	content: "";
+	position: relative;
+	display: block;
+	width: 30px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #3b3b3b;
+	bottom: -5px;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+	left: 8px;
+}
+.back-door {
+	width: 280px;
+	height: 189px;
+	position: absolute;
+	bottom: 20px;
+	left: 554px;
+	/* border-bottom: 2px solid rgba(0, 0, 0, 0.3); */
+	border-top: 2px solid rgba(0, 0, 0, 0.3);
+}
+.back-door::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 5px;
+	height: 90px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.back-door span {
+	position: absolute;
+	width: 115px;
+	height: 115px;
+	bottom: 0;
+	right: 0;
+	overflow: hidden;
+}
+.back-door span::after {
+	content: "";
+	display: block;
+	position: relative;
+	width: 200px;
+	height: 200px;
+	bottom: -15px;
+	right: -20px;
+	border-radius: 50%;
+	border: 5px solid rgba(0, 0, 0, 0.5);
+}
+.mirror {
+	position: relative;
+	top: -17px;
+	left: 20px;
+	width: 35px;
+	height: 10px;
+	border-radius: 30%;
+	background-color: #3b3b3b;
+	opacity: 0.95;
+}
+.mirror:after {
+	position: absolute;
+	content: "";
+	width: 5px;
+	height: 0;
+	top: -45px;
+	left: 10px;
+	border-bottom: 50px solid #3b3b3b;
+	border-left: 12px solid transparent;
+	border-right: 1px solid transparent;
+}
+.mirror::before {
+	position: absolute;
+	content: "";
+	width: 25px;
+	height: 35px;
+	top: -45px;
+	left: 15px;
+	background-color: #3b3b3b;
+	border-radius: 10px;
+}
+/* БАГАЖНИК */
+.trunk {
+	position: absolute;
+	width: 150px;
+	height: 190px;
+	border-radius: 50% 50% 100px 100px;
+	background-color: orangered;
+	right: -10px;
+	bottom: -10px;
+}
+.back-bumper {
+	width: 30px;
+	height: 65px;
+	background: linear-gradient(159deg, rgba(255, 255, 255, 1) 0%, rgba(250, 249, 207, 1) 100%);
+	position: absolute;
+	border-radius: 10px 20px 100% 10px;
+	border: 2px solid #3b3b3b;
+	right: -60px;
+	bottom: 28px;
+}
+.back-bumper:before {
+	content: "";
+	width: 80px;
+	height: 27px;
+	background: linear-gradient(159deg, rgba(255, 255, 255, 1) 0%, rgba(250, 249, 207, 1) 100%);
+	position: absolute;
+	border-radius: 70% 70% 14px 14px;
+	border: 2px solid #3b3b3b;
+	left: -60px;
+	top: 5px;
+	box-shadow: inset 0 -5px 0 1px #dbe4eb, inset 0 -6px 0 2px #3b3b3b;
+}
+
+.wheel {
+	width: 170px;
+	height: 170px;
+	background-color: #3b3b3b;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 0;
+	box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.8);
+	border-left: 3px solid rgba(0, 0, 0, 0.8);
+	border-right: 3px solid rgba(0, 0, 0, 0.8);
+	border-bottom: 3px solid rgba(0, 0, 0, 0.8);
+	border-top: 3px solid rgba(192, 192, 192, 0.2);
+	z-index: 3;
+}
+/* ТЕНИ НА КОЛЕСАХ */
+.wheel:after {
+	content: "";
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 18px;
+	border-top: 3px solid #c0c0c050;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 3px solid #c0c0c080;
+	left: 18px;
+}
+
+/* ТЕНИ НА КОЛЕСАХ МАЛЕНЬКИЕ */
+.wheel:before {
+	content: "";
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 23px;
+	border-top: 2px solid #c0c0c050;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 2px solid #c0c0c080;
+	left: 23px;
+}
+.front-wheel {
+	left: 110px;
+}
+.back-wheel {
+	right: 200px;
+}
+/* ДИСК КОЛЕСА */
+.disk {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 32px;
+	left: 32px;
+	border: 10px dashed rgba(0, 0, 0, 0.3);
+	background-color: #c0c0c0;
+}
+/* ОФОРМЛЕНИЕ ДИСКА */
+.disk:after {
+	content: "";
+	width: 1px;
+	height: 1px;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 50%;
+	background-color: orangered;
+	left: 50%;
+	box-shadow: 0 0 0 5px red, 0 0 0 10px orangered, 0 0 0 30px #dbe4eb, 0 0 0 35px black,
+		0 0 0 45px white;
+}
+/* ТЕНИ ЗА КОЛЕСОМ */
+.front-wheel-shadow,
+.back-wheel-shadow {
+	display: block;
+	width: 230px;
+	height: 0;
+	position: absolute;
+	z-index: 2;
+}
+/* ТЕНИ ЗА КОЛЕСОМ */
+.front-wheel-shadow {
+	bottom: 70px;
+	left: 80px;
+	border-bottom: 105px solid rgba(0, 0, 0, 1);
+	border-left: 45px solid transparent;
+	border-right: 45px solid transparent;
+	border-radius: 50% 50% 0px 0px;
+	opacity: 0.7;
+}
+/* ПОДВОДКА ДЛЯ ТЕНИ ЗА КОЛЕСОМ */
+.front-wheel-shadow:before {
+	content: "";
+	position: absolute;
+	width: 160px;
+	height: 80px;
+	background-color: rgba(0, 0, 0, 1);
+	top: -10px;
+	left: -10px;
+	border-radius: 100px / 50px;
+	box-shadow: 0 -5px 0 0 gray;
+}
+/* ТЕНИ ЗА КОЛЕСОМ */
+.back-wheel-shadow {
+	bottom: 70px;
+	right: 170px;
+	border-bottom: 95px solid rgba(0, 0, 0, 1);
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-radius: 100px 100px 0px 0px;
+	opacity: 0.7;
+}
+/* ПОДВОДКА ДЛЯ ТЕНИ ЗА КОЛЕСОМ */
+.back-wheel-shadow:before {
+	content: "";
+	position: absolute;
+	width: 150px;
+	height: 80px;
+	background-color: rgba(0, 0, 0, 1);
+	top: -15px;
+	left: -10px;
+	border-radius: 150px / 80px;
+	box-shadow: 0 -5px 0 0 gray;
+}
+
+.road {
+	position: absolute;
+	width: 100%;
+	height: 250px;
+	background: #808080;
+	box-shadow: 0 -20px 0 0 #cacaca, 0 40px 0 0 #808080;
+	border-bottom: 50px dashed white;
+	bottom: 30px;
+	left: 0;
+	z-index: 1;
+}
+
+body {
+	background: linear-gradient(
+		159deg,
+		rgba(110, 205, 255, 0.76234243697479) 0%,
+		rgba(88, 173, 255, 0.7539390756302521) 49%,
+		rgba(77, 215, 255, 0.9332107843137255) 73%,
+		rgba(65, 158, 255, 0.7343312324929971) 100%
+	);
+}
+
+.house {
+	width: 500px;
+	height: 900px;
+	bottom: 250px;
+	left: 200px;
+	position: absolute;
+	background-color: #809d5e;
+	z-index: 0;
+	border: 5px solid black;
+}
+.house-2 {
+	width: 500px;
+	height: 650px;
+	bottom: 250px;
+	right: 200px;
+	position: absolute;
+	background-color: #9d615d;
+	z-index: 0;
+	border: 5px solid black;
+}
+.flat {
+	width: 100px;
+	height: 150px;
+	background-color: #609fa0;
+	position: absolute;
+	border: 10px solid #4d5151;
+	box-shadow: inset 0 0 0 10px #508688;
+}
+.flat:first-child {
+	top: 30px;
+	left: 50px;
+}
+.flat:nth-child(2) {
+	top: 30px;
+	right: 50px;
+}
+.flat:nth-child(4) {
+	top: 210px;
+	right: 50px;
+}
+.flat:nth-child(6) {
+	top: 390px;
+	right: 50px;
+}
+.flat:nth-child(8) {
+	top: 570px;
+	right: 50px;
+}
+.flat:nth-child(3) {
+	top: 210px;
+	left: 50px;
+}
+.flat:nth-child(5) {
+	top: 390px;
+	left: 50px;
+}
+.flat:nth-child(7) {
+	top: 570px;
+	left: 50px;
+}
+.enter {
+	position: relative;
+	width: 100px;
+	height: 150px;
+	bottom: 20px;
+	left: 190px;
+	background-color: #b08065;
+	position: absolute;
+	border-top: 10px solid #655953;
+	border-right: 10px solid #655953;
+	border-left: 10px solid #655953;
+}
+
+.flat.on {
+	background-color: #ffdd00;
+	box-shadow: inset 0 0 0 10px #857300;
+}
+
+.sun {
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	top: 0;
+	border-radius: 50%;
+	left: 50%;
+	background-color: yellow;
+	box-shadow: 0 0 50px 0 yellow;
+	opacity: 0.8;
+}
+
+.footer {
+	font-size: 36px;
+	line-height: 1;
+	overflow: hidden;
+	font-family: arial;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	width: 100%;
+	text-transform: uppercase;
+	background-color: #fff;
+	opacity: 0.5;
+	font-weight: 700;
+	z-index: 5;
+}
